@@ -1,0 +1,160 @@
+@forward 'abstracts/global';
+
+header{
+
+  color: #fff;
+
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #000000f4;
+
+  
+  >div{
+    width: 85%;
+    margin: auto;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    ul{
+      display: flex;
+      list-style-type: none;
+      gap: 1rem;
+    }
+  }
+
+  z-index: 2;
+}
+
+section {
+  margin: 50px auto;
+  width: 85%;
+}
+
+.welcome{
+  margin-top: 0;
+  width: 100%;
+  height: 100svh;
+  
+  background-image: url("../img/hero-bg.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  
+  object-fit: contain;
+  position: relative;
+
+  &::before{
+    background-color: #000000a6;
+    position: absolute;
+    inset: 0 0 0 0;
+    content: "";
+  }
+}
+
+.welcome-container{
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  position: absolute;
+  inset: 0 0 0 0;
+  
+  .section-title{
+    padding: 0.2rem 2rem;
+    line-height: 0rem;
+    background-color: #ffffff21;
+    border-radius: 10rem;
+    box-sizing: content-box;
+  }
+
+  .section-header>span {
+    font-weight: bold;
+  }
+
+  :nth-child(2) h1{
+    font-weight: bolder;
+    font-size: 50px;
+    margin-bottom: 5px;
+  }
+
+  :nth-child(3){
+    font-size: 25px;
+    font-weight: light;
+    margin-bottom: 25px;
+  }
+
+  .get-started-btn{
+    font-weight: normal;
+    color: #fff;
+    background: none;
+    padding: 0.5rem 2rem;
+    border: 2px solid;
+    border-radius: 50px;
+  }
+
+}
+
+.about{
+  text-align: center;
+
+  // >*{
+  //   margin: auto;
+  // }
+
+  .section-title{
+    display: inline-block;
+    font-weight: bold;
+    color: #e43c5c;
+    background-color: #fdeff2;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    letter-spacing: 1px;
+  }
+
+  .section-header, .section-header span{
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .section-header span{
+    color: #e43c5c;
+  }
+
+}
+
+.about-desc{
+  font-weight: 600;
+  margin: auto;
+  width: 70ch;
+}
+
+.about-us-container{
+  padding: 25px;
+  font-size: large;
+  div{
+    width: 50%;
+    float: left;
+    text-align: left;
+  }
+  
+  p,
+  ul,
+  li{
+    font-weight: normal;
+  }
+
+  button{
+    color: #e43c5c;
+    background-color: #fff;
+    
+    font-size: 15px;
+    padding: 0.5rem 2rem;
+    border: solid #e43c5c 2px;
+    border-radius: 50px;
+  }
+}
