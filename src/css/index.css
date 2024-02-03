@@ -12,6 +12,7 @@ a {
 
 body {
   margin: 0;
+  background-color: #fdfdfe;
 }
 
 .clear-fix-left {
@@ -60,8 +61,6 @@ section {
   background-image: url("../img/hero-bg.jpg");
   background-attachment: fixed;
   background-size: cover;
-  -o-object-fit: contain;
-     object-fit: contain;
   position: relative;
 }
 .welcome::before {
@@ -81,6 +80,7 @@ section {
   inset: 0 0 0 0;
 }
 .welcome-container .section-title {
+  color: #fff;
   padding: 0.2rem 2rem;
   line-height: 0rem;
   background-color: rgba(255, 255, 255, 0.1294117647);
@@ -109,10 +109,7 @@ section {
   border-radius: 50px;
 }
 
-.about {
-  text-align: center;
-}
-.about .section-title {
+.section-title {
   display: inline-block;
   font-weight: bold;
   color: #e43c5c;
@@ -121,17 +118,51 @@ section {
   border-radius: 50px;
   letter-spacing: 1px;
 }
-.about .section-header, .about .section-header span {
+
+.about,
+.services,
+.portfolio,
+.pricing,
+.faq,
+.team,
+.contact {
+  text-align: center;
+}
+.about .section-header,
+.about .section-header span,
+.services .section-header,
+.services .section-header span,
+.portfolio .section-header,
+.portfolio .section-header span,
+.pricing .section-header,
+.pricing .section-header span,
+.faq .section-header,
+.faq .section-header span,
+.team .section-header,
+.team .section-header span,
+.contact .section-header,
+.contact .section-header span {
   font-size: 30px;
   font-weight: bold;
 }
-.about .section-header span {
+.about .section-header span,
+.services .section-header span,
+.portfolio .section-header span,
+.pricing .section-header span,
+.faq .section-header span,
+.team .section-header span,
+.contact .section-header span {
   color: #e43c5c;
 }
 
-.about-desc {
+.about-desc,
+.services-desc,
+.portfolio-desc,
+.pricing-desc,
+.team-desc,
+.contact-desc {
   font-weight: 600;
-  margin: auto;
+  margin: 25px auto;
   width: 70ch;
 }
 
@@ -156,4 +187,319 @@ section {
   padding: 0.5rem 2rem;
   border: solid #e43c5c 2px;
   border-radius: 50px;
+  transition: all 0.25s;
+}
+.about-us-container button:hover {
+  color: #fff;
+  background-color: #e43c5c;
+}
+
+.services-container {
+  margin-top: 25px;
+}
+.services-container a {
+  color: #000;
+}
+.services-container .card {
+  float: left;
+  width: 25%;
+}
+.services-container .card .inner-card {
+  box-shadow: #c4c4c4 1px 1px 10px;
+  margin: 5px;
+  padding: 30px;
+  border-radius: 15px;
+  transition: ease-in-out 0.25s;
+}
+.services-container .card .inner-card:hover {
+  background-color: #e43c5c;
+}
+.services-container .card .inner-card:hover a,
+.services-container .card .inner-card:hover p {
+  color: #fff;
+}
+.services-container .card a {
+  font-weight: bolder;
+}
+.services-container .card p {
+  color: #5e5e5e;
+  margin: auto;
+  width: 25ch;
+}
+
+.features-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.features-container a {
+  color: #000;
+}
+.features-container > .outer {
+  width: 25%;
+}
+.features-container > .outer .inner {
+  border-radius: 5px;
+  margin: 10px;
+  padding: 0.8rem;
+  box-shadow: #c4c4c4 1px 1px 10px;
+}
+
+.call-to-action {
+  width: 100%;
+  padding: 60px 0;
+  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.8)), url("../img/cta-bg.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.call-to-action-cont {
+  color: #fff;
+  text-align: center;
+}
+.call-to-action-cont h2 {
+  font-weight: bold;
+  font-size: 30px;
+}
+.call-to-action-cont .call-to-action-btn {
+  font-weight: normal;
+  color: #fff;
+  background: none;
+  padding: 0.5rem 2rem;
+  border: 2px solid;
+  border-radius: 50px;
+}
+
+.portfolio .container-btn {
+  padding: 25px;
+}
+.portfolio .container-btn button {
+  padding: 0.3rem 1rem;
+  margin: 5px;
+  border: none;
+  border-radius: 50px;
+  background-color: #ede9e9;
+  transition: all 0.25s;
+}
+.portfolio .container-btn button:hover {
+  color: #ede9e9;
+  background-color: #e43c5c;
+}
+.portfolio .portfolio-container-images div {
+  padding: 12px;
+  float: left;
+  width: 33.3333%;
+}
+.portfolio .portfolio-container-images img {
+  width: 100%;
+}
+
+.pricing-container {
+  margin: 25px 0;
+}
+.pricing-container .tier {
+  float: left;
+  min-width: 33.3333%;
+}
+.pricing-container .tier .inner {
+  background-color: #f9f9f9;
+  height: 100%;
+  padding: 50px;
+  padding-bottom: 30px;
+  margin: 12px;
+}
+.pricing-container .tier .inner > div, .pricing-container .tier .inner h2 {
+  line-height: 2rem;
+}
+.pricing-container .tier button {
+  color: #e43c5c;
+  background-color: #fff;
+  font-size: 15px;
+  padding: 0.5rem 2rem;
+  border: solid #e43c5c 2px;
+  border-radius: 50px;
+  transition: all 0.25s;
+}
+.pricing-container .tier button:hover {
+  color: #fff;
+  background-color: #e43c5c;
+}
+.pricing-container .recommended {
+  position: relative;
+}
+.pricing-container .recommended .inner {
+  border: solid 2px #e43c5c;
+  border-radius: 12px;
+}
+.pricing-container .recommended .inner div:first-of-type {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #e43c5c;
+  background-color: #fce6ea;
+  padding: 0.2rem 1rem;
+  border-radius: 50px;
+  line-height: 1.7rem;
+}
+.pricing-container .recommended button {
+  background-color: #e43c5c;
+  color: #fce6ea;
+}
+
+.faq-ls {
+  width: 90%;
+  margin: auto;
+  text-align: initial;
+}
+.faq-ls li div:hover {
+  cursor: pointer;
+  color: #e43c5c;
+  transition: all 0.25s;
+}
+
+.team-container {
+  margin-top: 25px;
+  display: flex;
+  gap: 25px;
+}
+.team-container img {
+  width: 100%;
+  margin-bottom: 25px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.team-container .card {
+  box-shadow: rgba(0, 0, 0, 0.074) 2px 2px 5px;
+  padding-bottom: 25px;
+}
+.team-container .card .name {
+  color: #303030;
+  font-weight: bold;
+  word-spacing: 5px;
+  font-size: 18px;
+}
+.team-container .card .role {
+  color: #5e5e5e;
+  font-size: 15px;
+}
+
+.contact iframe {
+  width: 100%;
+  height: 250px;
+  margin-bottom: 50px;
+}
+.contact .contact-container {
+  text-align: initial;
+  display: flex;
+  justify-content: space-around;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+}
+.contact .location-info > div div:first-child {
+  font-size: 20px;
+  font-weight: bolder;
+}
+.contact .email-form {
+  flex-grow: 2;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(2, 50px) 120px;
+  grid-template-areas: "username email" "subject subject" "msg msg" "btn btn";
+}
+.contact .email-form > *:not(:last-child) {
+  padding: 5px;
+}
+.contact .email-form input:first-of-type {
+  grid-area: username;
+}
+.contact .email-form input:nth-of-type(2) {
+  grid-area: email;
+}
+.contact .email-form input:last-of-type {
+  grid-area: subject;
+}
+.contact .email-form textarea {
+  grid-area: msg;
+}
+.contact .email-form div {
+  grid-area: btn;
+  margin: auto;
+}
+.contact .email-form button {
+  font-size: 15px;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 50px;
+  background-color: #e43c5c;
+  color: #fff;
+}
+
+footer {
+  box-shadow: #dbdbdb 1px 1px 15px;
+}
+
+.top-footer,
+.bottom-footer {
+  margin: auto;
+  width: 85%;
+}
+
+.top-footer {
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.footer-contact h2 {
+  margin: 0;
+}
+.footer-contact p {
+  color: #777777;
+}
+.footer-contact span {
+  font-weight: bold;
+}
+
+.footer-links h4,
+.footer-services h4,
+.footer-newsletter h4 {
+  font-weight: bolder;
+}
+.footer-links li,
+.footer-services li,
+.footer-newsletter li {
+  font-weight: normal;
+  line-height: 2rem;
+  color: #777777;
+}
+
+.footer-newsletter form {
+  margin: auto;
+}
+.footer-newsletter form input {
+  border-radius: 1.6rem;
+}
+.footer-newsletter form input:first-child {
+  padding: 0.8rem 6rem;
+  border: solid #e43c5c 1px;
+  margin-right: -50px;
+}
+.footer-newsletter form input:last-child {
+  padding: 0.8rem 1.8rem;
+  border: none;
+  font-size: 15px;
+  background-color: #e43c5c;
+  color: #fff;
+}
+
+.bottom-footer {
+  display: flex;
+  flex-direction: column;
+}
+.bottom-footer div a {
+  color: #e43c5c;
 }/*# sourceMappingURL=index.css.map */
